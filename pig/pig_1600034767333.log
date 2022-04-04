@@ -1,0 +1,837 @@
+Pig Stack Trace
+---------------
+ERROR 1000: Error during parsing. Encountered " <IDENTIFIER> "events "" at line 3, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+
+org.apache.pig.tools.pigscript.parser.ParseException: Encountered " <IDENTIFIER> "events "" at line 3, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.generateParseException(PigScriptParser.java:1498)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.handle_invalid_command(PigScriptParser.java:1306)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:726)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1200: <line 3, column 0>  mismatched input 'DESCRIBE' expecting SEMI_COLON
+
+Failed to parse: <line 3, column 0>  mismatched input 'DESCRIBE' expecting SEMI_COLON
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:244)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:182)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1707)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1107: Cannot merge join keys, incompatible types
+
+org.apache.pig.impl.logicalLayer.validators.TypeCheckerException: ERROR 1060: 
+<line 15, column 13> Cannot resolve Join output schema
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.throwTypeCheckerException(TypeCheckingRelVisitor.java:142)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visit(TypeCheckingRelVisitor.java:715)
+	at org.apache.pig.newplan.logical.relational.LOJoin.accept(LOJoin.java:172)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:190)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+Caused by: org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1107: Cannot merge join keys, incompatible types
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.getAtomicJoinColType(TypeCheckingRelVisitor.java:775)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visit(TypeCheckingRelVisitor.java:661)
+	... 20 more
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1200: <line 15, column 0>  mismatched input 'FLATTEN' expecting EOF
+
+Failed to parse: <line 15, column 0>  mismatched input 'FLATTEN' expecting EOF
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:244)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:182)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1707)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1200: <line 15, column 0>  mismatched input 'FLATTEN' expecting EOF
+
+Failed to parse: <line 15, column 0>  mismatched input 'FLATTEN' expecting EOF
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:244)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:182)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1707)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [alivegroup::patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 15, column 44> Invalid field projection. Projected field [alivegroup::patientid] does not exist in schema: group:chararray,aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 16, column 65> Invalid field projection. Projected field [etimestamp] does not exist in schema: group:tuple(patientid:int,eventid:chararray),aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 16, column 65> Invalid field projection. Projected field [etimestamp] does not exist in schema: group:tuple(patientid:int,eventid:chararray),aliveevents:bag{:tuple(patientid:int,eventid:chararray,etimestamp:datetime,value:float,label:int)}.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1039: 
+<line 18, column 196> (Name: Subtract Type: null Uid: null)incompatible types in Subtract Operator left hand side:datetime right hand side:datetime
+
+org.apache.pig.impl.logicalLayer.validators.TypeCheckerException: ERROR 1059: 
+<line 18, column 14> Problem while reconciling output schema of ForEach
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.throwTypeCheckerException(TypeCheckingRelVisitor.java:142)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visit(TypeCheckingRelVisitor.java:182)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:190)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+Caused by: org.apache.pig.impl.logicalLayer.validators.TypeCheckerException: ERROR 1039: 
+<line 18, column 196> (Name: Subtract Type: null Uid: null)incompatible types in Subtract Operator left hand side:datetime right hand side:datetime
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingExpVisitor.addCastsToNumericBinExpression(TypeCheckingExpVisitor.java:170)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingExpVisitor.visit(TypeCheckingExpVisitor.java:109)
+	at org.apache.pig.newplan.logical.expression.SubtractExpression.accept(SubtractExpression.java:54)
+	at org.apache.pig.newplan.ReverseDependencyOrderWalker.walk(ReverseDependencyOrderWalker.java:70)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visitExpressionPlan(TypeCheckingRelVisitor.java:191)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visit(TypeCheckingRelVisitor.java:157)
+	at org.apache.pig.newplan.logical.relational.LOGenerate.accept(LOGenerate.java:245)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.visitor.TypeCheckingRelVisitor.visit(TypeCheckingRelVisitor.java:174)
+	... 20 more
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestmap] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestmap] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestmap] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestmap] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestamp] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 23, column 85> Invalid field projection. Projected field [events::estimestamp] does not exist in schema: events::patientid:int,events::eventid:chararray,events::etimestamp:datetime,events::value:float,mortality::patientid:int,mortality::mtimestamp:datetime,mortality::label:int.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1108: 
+<line 26, column 40> Duplicate schema alias: patientid
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1108: 
+<line 26, column 40> Duplicate schema alias: patientid
+	at org.apache.pig.newplan.logical.visitor.SchemaAliasVisitor.validate(SchemaAliasVisitor.java:75)
+	at org.apache.pig.newplan.logical.visitor.SchemaAliasVisitor.visit(SchemaAliasVisitor.java:105)
+	at org.apache.pig.newplan.logical.relational.LOGenerate.accept(LOGenerate.java:245)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.visitor.SchemaAliasVisitor.visit(SchemaAliasVisitor.java:100)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:176)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 45, column 40> Invalid field projection. Projected field [deadevents::patientid] does not exist in schema: dead_filter_rename::patientid:int,dead_filter_rename::eventid:chararray,dead_filter_rename::etimestamp:datetime,dead_filter_rename::value:float,dead_filter_rename::mtimestamp:datetime,dead_filter_rename::label:int,dead_indexes::patientid:int,dead_indexes::index_date:datetime.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 45, column 40> Invalid field projection. Projected field [deadevents::patientid] does not exist in schema: dead_filter_rename::patientid:int,dead_filter_rename::eventid:chararray,dead_filter_rename::etimestamp:datetime,dead_filter_rename::value:float,dead_filter_rename::mtimestamp:datetime,dead_filter_rename::label:int,dead_indexes::patientid:int,dead_indexes::index_date:datetime.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1025: 
+<line 51, column 234> Invalid field projection. Projected field [deadevents::etimestamp] does not exist in schema: dead_filter_rename::patientid:int,dead_filter_rename::eventid:chararray,dead_filter_rename::etimestamp:datetime,dead_filter_rename::value:float,dead_filter_rename::mtimestamp:datetime,dead_filter_rename::label:int,dead_indexes::patientid:int,dead_indexes::index_date:datetime.
+
+org.apache.pig.impl.plan.PlanValidationException: ERROR 1025: 
+<line 51, column 234> Invalid field projection. Projected field [deadevents::etimestamp] does not exist in schema: dead_filter_rename::patientid:int,dead_filter_rename::eventid:chararray,dead_filter_rename::etimestamp:datetime,dead_filter_rename::value:float,dead_filter_rename::mtimestamp:datetime,dead_filter_rename::label:int,dead_indexes::patientid:int,dead_indexes::index_date:datetime.
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.findColNum(ProjectExpression.java:191)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.setColumnNumberFromAlias(ProjectExpression.java:174)
+	at org.apache.pig.newplan.logical.visitor.ColumnAliasConversionVisitor$1.visit(ColumnAliasConversionVisitor.java:53)
+	at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:215)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:142)
+	at org.apache.pig.newplan.logical.relational.LOInnerLoad.accept(LOInnerLoad.java:128)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.logical.optimizer.AllExpressionVisitor.visit(AllExpressionVisitor.java:124)
+	at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:87)
+	at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+	at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:52)
+	at org.apache.pig.newplan.logical.relational.LogicalPlan.validate(LogicalPlan.java:175)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1708)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1680)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:623)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1082)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:505)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1000: Error during parsing. Encountered " <IDENTIFIER> "exit "" at line 11, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+
+org.apache.pig.tools.pigscript.parser.ParseException: Encountered " <IDENTIFIER> "exit "" at line 11, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.generateParseException(PigScriptParser.java:1498)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.handle_invalid_command(PigScriptParser.java:1306)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:726)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1000: Error during parsing. Encountered " <IDENTIFIER> "exit "" at line 1, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+
+org.apache.pig.tools.pigscript.parser.ParseException: Encountered " <IDENTIFIER> "exit "" at line 1, column 1.
+Was expecting one of:
+    <EOF> 
+    "cat" ...
+    "clear" ...
+    "fs" ...
+    "sh" ...
+    "cd" ...
+    "cp" ...
+    "copyFromLocal" ...
+    "copyToLocal" ...
+    "dump" ...
+    "\\d" ...
+    "describe" ...
+    "\\de" ...
+    "aliases" ...
+    "explain" ...
+    "\\e" ...
+    "help" ...
+    "history" ...
+    "kill" ...
+    "ls" ...
+    "mv" ...
+    "mkdir" ...
+    "pwd" ...
+    "quit" ...
+    "\\q" ...
+    "register" ...
+    "rm" ...
+    "rmf" ...
+    "set" ...
+    "illustrate" ...
+    "\\i" ...
+    "run" ...
+    "exec" ...
+    "%default" ...
+    "%declare" ...
+    "scriptDone" ...
+    "" ...
+    "" ...
+    <EOL> ...
+    ";" ...
+    
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.generateParseException(PigScriptParser.java:1498)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.handle_invalid_command(PigScriptParser.java:1306)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:726)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:230)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:205)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:565)
+	at org.apache.pig.Main.main(Main.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+================================================================================
